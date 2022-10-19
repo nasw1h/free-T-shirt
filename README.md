@@ -1,7 +1,7 @@
 # free-T-shirt
 Make your pull requests for free T-shirt
 
-Other repos:
+Other repositories:
 
 [illacceptanything](https://github.com/nasw1h/illacceptanything)
 
