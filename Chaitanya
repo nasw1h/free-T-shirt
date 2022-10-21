@@ -1,0 +1,540 @@
+1
+#include<stdio.h>
+#include<conio.h>
+
+int main()
+{
+	int a,n,k,i,sum=0,x,rev[20];
+	printf("\n enter the numbers \t");
+	scanf("%d",&n);
+	x=n, k=0;
+	while(x>0)
+	{
+		a=x%10;
+		sum=sum+a;
+		rev[k]=a;
+		x=x/10;
+		k++;
+	}
+	printf("\n\t sum of the digits of %d = %d ",n,sum);
+	printf("\n\n\t revers of %d =",n);
+	for(i=0;i<k;i++)
+	{
+		printf("%d",rev[i]);
+		
+	}
+	getch();
+}
+2
+#include<stdio.h>
+#include<conio.h>
+
+int main()
+{
+	int i,n,a=1,b=0,c=0;
+	printf("\n enter the limit \t");
+	scanf("%d",&n);
+	printf("\n\t Fibonacci series:");
+	for(i=1;i<=n;i++)
+	{
+		printf("\t%d",c);
+		c=a+b;
+		a=b;
+		b=c;
+		
+	}
+	getch();
+}
+3
+#include<stdio.h>
+#include<conio.h>
+
+int main()
+{
+	int i,j,r,k=0;
+	printf("\n number of lines\t");
+	scanf("%d",&r);
+	for(i=1;i<=r;i++)
+	{
+		printf("\n\n\t");
+		for(j=1;j<=r-i;j++)
+		{
+			printf("  "); //space +space
+		}
+	    for(k=1;k<=i;k++)
+		{
+			printf(" *  "); //space +star+space+space
+		}
+	}
+	getch();
+}
+4
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+int main()
+{    
+    char s[50],r[50];
+	int i,count=1;
+	printf("\n\t enter a sentence ---");
+	gets(s);
+	if(s[0]==' ' || s[0]=='\t')
+	count=0;
+	for(i=0;s[i]!='\0';i++)
+	{
+	if((s[i]==' ' || s[i]=='\t')&&(s[i+1]!=' ')&&(s[i+1]!='\t')&&(s[i+1]!='\0'))
+		count++;
+	}
+	printf("\n\t no of words = %d",count);
+	getch();
+}
+5
+#include<stdio.h>
+#include<conio.h>
+
+int main()
+{    
+    
+	int n,flag=1,i;
+	printf("\n\t enter the number");
+	scanf("%d",&n);
+	if(n<2)
+	{
+		printf("\n\t%d is not a prime",n);
+		
+	}
+	for(i=2;i<=n/2;i++)
+	{
+		if(n%i==0)
+		{
+			flag=0;
+			break;
+		}
+	}
+	if(flag==0)
+	printf("\n\t=%d is not prime number",n);
+	else
+	printf("\n\t=%d is a prime number",n);
+	getch();
+}
+6
+#include<stdio.h>
+#include<conio.h>
+
+int main()
+{    
+    
+	int r,c,a[20][20],t[20][20],i,j;
+	printf("\n\t order of matrix");
+	scanf("%d%d",&r,&c);
+	for(i=0;i<r;i++)
+	{   
+	    for(j=0;j<c;j++)
+	    {
+	    	printf("matrix[%d][%d] = ",i,j);
+	    	scanf("%d",&a[i][j]);
+	    	t[j][i]=a[i][j];
+		}
+		
+		
+	}
+	printf("\n\tmatrix[%d][%d]\n\n\t\t",r,c);
+	for(i=0;i<=r;i++)
+	{
+	for(j=0;j<c;j++)
+	{
+	   printf("%4d",a[i][j]);
+	   	
+	}
+	 printf("\n\t\t");
+	}
+	
+	printf("\n\n\tTranspos[%d][%d]\n\n\t\t",c,r);
+	for(i=0;i<=c;i++)	
+	{
+	for(j=0;j<r;j++)
+	{
+	printf("%4d",t[i][j]);	
+	}	
+	
+	 printf("\n\t\t");
+}
+	getch();
+}
+
+7
+#include<stdio.h>
+#include<conio.h>
+#include<math.h>
+
+int main()
+{
+	double t=1,s=0;
+	int i;
+	printf("\n\n sum of the series 1+(1/2)^2+(1/3)^3 +....");
+	printf("\n---------------------------------------------");
+	for(i=1;;i++)
+	{
+	t =1/ pow(i,i);
+	if(t<0.0001)
+	break;
+	printf("\n\t%d)^%d = %f\n",i,i,t);
+	s = s + t;
+	}
+		printf("\n\t the sum of the above series = %f",s);
+	getch();
+}
+8
+#include<stdio.h>
+#include<conio.h>
+
+int main()
+{
+	int n,digits,i,j;
+	char str[15];
+	printf("\n\t enter the number");
+	scanf("%d",&n);
+	digits=sprintf(str,"%d",n);
+	for(i=0;i<digits;i++)
+	{
+		printf("\n\n\t");
+		for(j=i;j<digits;j++)
+		{
+			printf("%c ",str[j]);
+		}
+		
+	}
+	getch();
+}
+9
+#include<stdio.h>
+#include<conio.h>
+#include<ctype.h>
+
+int main()
+{
+	
+	char s[100];
+	int i;
+	printf("\n\t enter the string\n\t");
+	gets(s);
+    printf("\tshort form is %c",toupper(s[0]));
+    for (i=0;s[i]!='\0';i++)
+    {
+    	if (s[i]==' '&&s[i+1]!=' ')
+    	{
+    		printf("%c",toupper(s[i+1]));	
+				}
+				}
+	getch();
+}
+10
+#include<stdio.h>
+#include<conio.h>
+
+int main()
+{
+	
+	
+	int i,x,sum,notes[10]={2000,500,200,100,50,20,10,5,2,1};
+	long n;
+	printf("\n\t enter the amount =");\
+	scanf("%d",&n);
+	sum=0;
+    printf("\n\tcurrency denomination of %d\n",n);
+    for (i=0;i<10;i++)
+    {
+    	x=n/notes[i];
+    	n=n%notes[i];
+    	printf("\n\t\t no of currencies of %4d = %d",notes[i],x);
+    	sum=sum+x;
+    }
+    printf("\n\n\t total number of currencies =%d",sum);
+	getch();
+}
+11
+#include<stdio.h>
+#include<conio.h>
+#include<math.h>
+int main()
+{
+	int a,x,n,s,ub,lb,digits;
+	char str[10];
+	printf("\n enter lower bound=");
+	scanf("%d",&lb);
+	printf("\n enter upper bound=");
+	scanf("%d",&ub);
+	printf("\n armstrong numbers within %d and %d \n\n",lb,ub);
+	for(n=lb;n<=ub;n++)
+	{
+		s=0;
+		x=n;
+		digits=sprintf(str,"%d",n);
+		while(x>0)
+		{
+			a=x%10;
+			s=s+pow(a,digits);
+			x=x/10;
+		}
+		if(s==n)
+		printf(" %d ",n);
+		
+	}
+	getch();
+}
+12
+#include<stdio.h>
+#include<conio.h>
+long factorial(int);
+
+int main()
+{
+	int x,c;
+	long f;
+	printf("\n\t enter the number=");
+	scanf("%d",&x);
+	f=factorial(x);
+	printf("\tfactorial of %d =%d",x,f);
+	getch();
+}
+	long factorial(int n)
+	{
+		if(n==0)
+		return 1;// 0! =1
+		else
+		return n*factorial(n-1);
+	}
+13
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+
+int main()
+{
+    char s[50],r[50];
+	printf("\n\t enter the string=");
+	gets(s);
+	strcpy(r,s);
+	if (strcmp(strrev(s),r)==0)
+	   printf("\n\t %s is palindrom",r);
+	   else 
+	    printf("\n\t %s is not palindrom",r);
+	getch();
+}
+14
+#include<stdio.h>
+#include<conio.h>
+
+
+int main()
+{
+    int y;
+	printf("\n\t enter the year to check=");
+	scanf("%d",&y);
+	
+	if (((y%4==0)&&(y%100!=0)) || (y%400==0))
+	   printf("\n\t %d is a leap year",y);
+	   else 
+	    printf("\n\t %d is not a leap year",y);
+	
+	getch();
+}
+15
+#include<stdio.h>
+#include<conio.h>
+
+int main()
+{   
+    FILE *oddfp, *evenfp;
+	int n,i;
+	char str[100];
+	printf("\n enter no of records\t");
+	scanf("%d",&n);
+	evenfp=fopen("evet.txt","w");
+	oddfp=fopen("odd.txt","w");
+	if(oddfp==NULL || evenfp==NULL)
+    {
+    	printf("can't open files to writes..!");
+    	"return;";
+	}
+	fprintf(evenfp,"Even numbers");
+	fprintf(oddfp,"odd numbers");
+	for(i=0;i<=n;i++)
+	{
+		if (i%2==0)
+		fprintf(evenfp,"%4d",i);
+		else
+		fprintf(oddfp,"%4d",i);
+	}
+	fclose(evenfp);
+	fclose(oddfp);
+    evenfp=fopen("evet.txt","r");
+	oddfp=fopen("odd.txt","r");
+	if(oddfp==NULL || evenfp==NULL)
+	{
+		printf("cant open files to read");
+		"retun;";
+	}
+	fgets(str,100,evenfp);
+	puts(str);
+	fgets(str,100,oddfp);
+	puts(str);
+	fclose(evenfp);
+	fclose(oddfp);
+	getch();
+}
+16
+#include<stdio.h>
+#include<conio.h>
+
+
+void main()
+{
+    int n,x,a,i,j,b[3]={2,8,16};
+    char s[20];
+	printf("\n\t enter the decimal number :");
+	scanf("%d",&n);
+	for(i=0;i<3;i++)
+	{
+		x=n;
+		j=0;
+		while(x>0)
+		{
+			a=x%b[i];
+			if(a>=10)
+			s[j]=a+55; //ascci code of a=65
+			else
+			s[j]=a+48; //ascci code of a=48
+			x=x/b[i];
+			j++;
+		}
+		s[j]='\0';
+		switch(i)
+		{
+		case 0: printf("\n \t binary equivalent of %d           :%s",n,strrev(s));
+		break;  
+		case 1: printf("\n \t total equivalent of %d            :%s",n,strrev(s));
+		break;
+		case 2: printf("\n \t the exadecimal equivalent of %d   :%s",n,strrev(s));
+		break;	
+		}
+		
+	}
+	getch();
+}
+17
+#include<stdio.h>
+#include<conio.h>
+
+
+void main()
+{
+    int a[50],b[50],c[100],m,n,i,j,k=0;
+	printf("\n\t size of 1st Array =");
+	scanf("%d",&m);
+	 printf("\n\t elements of 1st array in stored order \n");
+	 for(i=0;i<m;i++)
+	 {
+	 	scanf("%d",&a[i]);
+	 }
+	 printf("\n size of 2nd array =");
+	 scanf("%d",&n);
+	printf("\n element of 2nd array in stored order \n");
+	for(i=0;i<n;i++)
+	{
+		scanf("\t\t%d",&b[i]);
+	}
+	i=0, j=0,k=0;
+	while(i<m&& j<n)
+	{
+		if (a[i]<b[i])
+		c[k++]=a[i++];
+		else
+		c[k++]=b[j++];
+	}
+	while(i<m)
+	c[k++]=a[i++];
+	while(j<n)
+	c[k++]=b[j++];
+	printf("Array after merging:");
+	for (i=0;i<m+n;i++)
+	printf("%d ",c[i]);
+	getch();
+}
+18
+#include<stdio.h>
+#include<conio.h>
+
+
+int main()
+{
+    int n,i,j,a[50][50];
+	printf("\n\t order of the square matrix =");
+	scanf("%d",&n);
+	printf("\n\t the matrix A is\n");
+	for(i=0;i<n;i++)
+	{
+		printf("\n\n\t");
+		for(j=0;j<n;j++)
+		{
+			if(i==j)
+			a[i][j]=0;
+			else if(i<j)
+			a[i][j]=1;
+			else
+			a[i][j]=-1;
+			printf("%4d",a[i][j]);
+			
+		}
+	}
+	
+	getch();
+}
+19
+#include<stdio.h>
+#include<conio.h>
+#include<math.h>
+
+
+int main()
+{
+    float x1,y1,x2,y2,gdistance;
+    
+	printf("enter x1:");
+	scanf("%f",&x1);
+	printf("enter y1:");
+	scanf("%f",&y2);
+	printf("enter x2:");
+	scanf("%f",&x1);
+	printf("enter y2:");
+	scanf("%f",&x1);
+	gdistance=((x2-x1)*(x2-x1))+((y2-y1)*(y2-y1));
+	printf("Distance between the said points: %4f",sqrt(gdistance));
+	printf("\n");
+	return 0;
+	
+	
+	getch();
+}
+
+20
+ #include<stdio.h>
+ struct complex
+ {
+ 	float real,imaginary;
+ };
+ int main()
+ {
+ 	struct complex n1,n2,sum;
+ 	printf("Enter real and imaginary part of first complex number  :  ");
+ 	scanf("%f%f",&n1.real,&n1.imaginary);
+ 	printf("First complex number :  %0.2f+i%0.2f",n1.real,n1.imaginary);
+ 	printf("\nEnter real and imaginary part of second complex number  :  ");
+ 	scanf("%f%f",&n2.real,&n2.imaginary);
+ 	printf("\nSecond complex number :  %0.2f+i%0.2f",n2.real,n2.imaginary);
+ 	sum.real=n1.real+n2.real;
+ 	sum.imaginary=n1.imaginary+n2.imaginary;
+ 	printf("\n\nsum of two complex no: is %0.2f +i%0.2f",sum.real,sum.imaginary);
+ 	return 0;
+ 	
+ }
