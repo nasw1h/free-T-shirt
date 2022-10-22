@@ -22,3 +22,5 @@ Other repositories:
 [Random-Quotes](https://github.com/AdheelAhmed-D3CD/Random-Quotes)
 
 [Hacktoberfest-2022](https://github.com/IETCU-SIAS/Hacktoberfest-2022)
+
+[Bring-Every-Business-Online](https://github.com/gtech-mulearn/bring-every-business-online)
